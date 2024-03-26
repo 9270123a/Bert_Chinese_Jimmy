@@ -20,6 +20,7 @@ Bert_Chinese_Jimmy 是一個使用 BERT 模型對中文文本進行情感分析�
 词云生成：基于文本数据生成词云，以直观展示高频词汇。
 
 情感趋势分析：绘制情感得分随时间变化的趋势图。
+![App Screenshot](https://github.com/9270123a/Bert_Chinese_Jimmy/issues/1#issue-2208150962)
 
 ## 項目結構
 
