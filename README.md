@@ -78,8 +78,13 @@ EmotionTrendPlotter.py
 ![Figure_2](https://github.com/9270123a/Bert_Chinese_Jimmy/assets/157206678/90296c05-2a84-4e85-b9d9-23b06b5e6981)
 
 
-## 貢獻指南
+## 如何貢獻
+我們歡迎所有形式的貢獻，包括但不限於新功能的提議、錯誤修正、文件更新。請發送Pull Request或創建Issue與我們交流。
 
+## 聯繫方式
+若有任何問題或建議，請透過以下方式聯繫我們：
 
-我們歡迎各種形式的貢獻，無論是改進現有功能、修復bug還是添加新的功能。 請透過 GitHub 的 Pull Request 或 Issue 提交您的貢獻。
+Email: 9270123s@gmail.com
 
+## 致謝
+感謝所有支持和參與本專案的人，特別是資料集的提供者以及開源社群的貢獻者。
