@@ -3,66 +3,80 @@
 
 項目概覽
 
-Bert_Chinese_Jimmy 是一個使用 BERT 模型對中文文本進行情感分析的項目。它包含了從文本預處理、数据增强、模型訓練與評估，到生成词云和情感趋势分析等多个步骤的实现。
+Bert_Chinese_Jimmy 是一個使用 BERT 模型對中文文字進行情緒分析的項目。 它包含了從文字預處理、數據增強、模型訓練與評估，到生成文字雲和情緒趨勢分析等多個步驟的實現。
+
 
 
 ## 主要特色
 
 
-文本預處理：包括清理聊天记录中的无关信息（例如贴图、图片等），将文本数据从 txt 格式转换为 CSV 格式，以及去除停用词。
+文字預處理：包含清理聊天記錄中的無關資訊（例如貼圖、圖片等），將文字資料從 txt 格式轉換為 CSV 格式，以及移除停用詞。
 
-数据增强：通过調整情感得分来优化模型的输入数据。
+數據增強：透過調整情緒得分來優化模型的輸入數據。
 
-模型訓練：使用 BERT 模型对文本进行情感分析，包括二分类和回归任务的实现。
+模型訓練：使用 BERT 模型對文本進行情緒分析，包括二分類和回歸任務的實現。
 
-評估與分析：提供了工具来测试模型对 CSV 文件中每条数据的预测结果，并给出情感得分以便生成热力图。
+評估與分析：提供了工具來測試模型對 CSV 檔案中每筆資料的預測結果。
 
-词云生成：基于文本数据生成词云，以直观展示高频词汇。
+文字雲生成：基於文字資料生成文字雲，以直觀展示高頻詞彙。
 
-情感趋势分析：绘制情感得分随时间变化的趋势图。
-
-
-[![App Screenshot](https://github.com/9270123a/Bert_Chinese_Jimmy/issues/1#issue-2208150962)](https://github.com/9270123a/Bert_Chinese_Jimmy/issues/2#issue-2208158936)
+情緒趨勢分析：繪製情緒分數隨時間變化的趨勢圖。
 
 ## 項目結構
 
 
 ```bash
 Bert_Chinese_Jimmy/
-├── data/                        # 数据目录，存放原始数据和处理后的数据
-├── models/                      # 模型目录，存放训练好的模型
-├── preprocessing/               # 数据预处理脚本
-│   ├── clean_chat_records.py    # 清理聊天记录
-│   ├── txtToCSV.py              # 将 txt 格式的聊天记录转换为 CSV 格式
-│   └── ...                      # 其他预处理脚本
-├── training/                    # 模型训练和评估脚本
-│   ├── bet.py                   # BERT 模型训练脚本（二分类任务）
-│   ├── Bet_regression.py        # BERT 模型训练脚本（回归任务）
-│   └── ...                      # 其他训练和评估脚本
-├── analysis/                    # 数据分析和可视化脚本
-│   ├── EmotionTrendPlotter.py   # 情感趋势分析脚本
-│   ├── generate_wordcloud.py    # 生成词云脚本
-│   └── ...                      # 其他分析脚本
-└── README.md                    # 項目文档
-
-
+├── data/ # 資料目錄，存放原始資料和處理後的資料
+├── models/ # 模型目錄，存放訓練好的模型
+├── preprocessing/ # 資料預處理腳本
+│ ├── clean_chat_records.py # 清理聊天記錄，包括移除無關資訊如貼圖、圖片等
+│ ├── CutData.py # 處理數據，如選取數據的一部分進行分析或訓練
+│ ├── Data Augmentation.py # 數據增強，透過調整情緒得分來優化模型的輸入數據
+│ ├── RemoveStopwordsAndCleanCSV.py # 移除停用詞並清理CSV數據，以便進一步分析
+│ ├── txtToCSV.py # 將 txt 格式的聊天記錄轉換為 CSV 格式
+│ └── chinese_text_frequency_analysis.py.py # 文本频率分析，生成高频词汇统计
+├── training/ # 模型訓練與評估腳本
+│ ├── bet.py # BERT 模型訓練腳本（二分類任務）
+│ ├── Bet_regression.py # BERT 模型訓練腳本（迴歸任務）
+│ ├── Caculate_senti_score_Bert.py # 使用BERT進行情緒分數計算
+│ ├── Calculate_sentiment_Score_.py # 使用SnowNLP計算情緒得分
+│ └── test.py # 測試腳本，進行模型預測
+├── analysis/ # 資料分析與視覺化腳本
+│ ├── chinese_text_frequency_analysis.py.py # 文本頻率分析，產生高頻詞彙統計
+│ ├── EmotionTrendPlotter.py # 情緒分數隨時間變化趨勢分析
+│ ├── generate_wordcloud.py # 生成詞雲腳本，視覺化高頻詞彙
+│ ├── TestCSVtoevertScore.py # 針對CSV每列進行測試並給出情緒分數，用於產生熱力圖
+└── README.md # 項目文檔
 
 ```
 
 
 ## 快速開始
 
-準備數據：將您的原始聊天记录数据放入 data/ 目录中。
+準備數據：將您的原始聊天記錄資料放入 data/ 目錄中。
 
-文本預處理：运行 preprocessing/ 目录下的脚本来清理和转换数据格式。
+文字預處理：執行 preprocessing/ 目錄下的腳本來清理和轉換資料格式。
 
-訓練模型：根据需求运行 training/ 目录下的脚本来训练模型。
+訓練模型：根據需求執行 training/ 目錄下的腳本來訓練模型。
 
-评估与分析：使用 analysis/ 目录下的脚本对模型进行评估和结果分析。
+評估與分析：使用 analysis/ 目錄下的腳本對模型進行評估和結果分析。
+## 生成文字雲
+
+```bash
+generate_wordcloud.py
+```
+![文字雲](https://github.com/9270123a/Bert_Chinese_Jimmy/assets/157206678/6c7f7fb5-ca42-4c01-a632-086c7ec11a13)
+
+## 生成情感折線圖
+```bash
+EmotionTrendPlotter.py
+```
+![Figure_2](https://github.com/9270123a/Bert_Chinese_Jimmy/assets/157206678/90296c05-2a84-4e85-b9d9-23b06b5e6981)
 
 
 ## 貢獻指南
 
 
-我們歡迎各種形式的貢獻，無論是改進現有功能、修复bug還是添加新的功能。請通過 GitHub 的 Pull Request 或 Issue 提交您的貢獻。
+我們歡迎各種形式的貢獻，無論是改進現有功能、修復bug還是添加新的功能。 請透過 GitHub 的 Pull Request 或 Issue 提交您的貢獻。
 
