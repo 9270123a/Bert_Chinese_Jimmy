@@ -61,6 +61,9 @@ Bert_Chinese_Jimmy/
 訓練模型：根據需求執行 training/ 目錄下的腳本來訓練模型。
 
 評估與分析：使用 analysis/ 目錄下的腳本對模型進行評估和結果分析。
+## 架構圖
+![messageImage_1711458518577](https://github.com/9270123a/Bert_Chinese_Jimmy/assets/157206678/f1e271ae-6ccb-4992-b359-d60b0b24bf53)
+
 ## 生成文字雲
 
 ```bash
