@@ -76,7 +76,12 @@ generate_wordcloud.py
 EmotionTrendPlotter.py
 ```
 ![Figure_2](https://github.com/9270123a/Bert_Chinese_Jimmy/assets/157206678/90296c05-2a84-4e85-b9d9-23b06b5e6981)
+## 回覆頻率折線圖
+```bash
+ChatFrequency.py
+```
 
+![jimmy](https://github.com/9270123a/Bert_Chinese_Jimmy/assets/157206678/2f0b1ed4-4cc9-40de-acca-e30ab9f19436)
 
 ## 如何貢獻
 我們歡迎所有形式的貢獻，包括但不限於新功能的提議、錯誤修正、文件更新。請發送Pull Request或創建Issue與我們交流。
