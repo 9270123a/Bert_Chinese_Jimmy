@@ -6,7 +6,7 @@ from collections import Counter
 import matplotlib.pyplot as plt
 # 如果 generate_wordcloud.py 這個檔案中含有生成詞雲的函數，並且你希望在這個程式碼中使用，
 # 請確保該檔案存在且能夠被正確引用。否則，這行代碼可能會引起錯誤。
-import generate_wordcloud as gw
+import analysis.generate_wordcloud as gw
 
 def get_wordcloud(data_path, save_path, is_send=0):
     '''
